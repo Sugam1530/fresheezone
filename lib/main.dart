@@ -1,11 +1,20 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: unused_import
 
-class MyApp extends StatefulWidget { 
+import 'package:flutter/material.dart';
+import 'package:fresheezone/pages/dashboard.dart';
+import 'package:fresheezone/pages/registerPage.dart';
+import 'package:fresheezone/pages/splashScreen.dart';
+
+void main() async {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
-}
+}  
 
 class _MyAppState extends State<MyApp> {
   @override
@@ -16,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyApp(), 
+      home: const splashScreenPage(),
     );
   }
 }
