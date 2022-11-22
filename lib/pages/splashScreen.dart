@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:fresheezone/pages/dashboard.dart';
-import 'package:fresheezone/pages/homePage.dart';
 import 'package:fresheezone/pages/loginPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

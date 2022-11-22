@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, unused_field
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -324,6 +324,7 @@ class _dashboardPageState extends State<dashboardPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 16,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(

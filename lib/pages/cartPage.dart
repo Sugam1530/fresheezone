@@ -1,6 +1,7 @@
-// ignore_for_file: sized_box_for_whitespace, camel_case_types, prefer_const_constructors
+// ignore_for_file: sized_box_for_whitespace, camel_case_types, prefer_const_constructors, unused_import, duplicate_ignore, file_names
 
 import 'package:flutter/material.dart';
+import 'package:counter_button/counter_button.dart';
 
 class cartPage extends StatefulWidget {
   const cartPage({super.key});
@@ -106,36 +107,39 @@ class _cartPageState extends State<cartPage> {
                           margin: const EdgeInsets.only(left: 10, top: 10),
                           child: Row(
                             children: [
-                              Container(
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Container( 
                                 height: 18,
                                 width: 22,
-                                color: const Color.fromARGB(255, 240, 219, 156),
+                                color: Color.fromARGB(255, 240, 219, 156),
                                 child: IconButton(
                                   // ignore: unnecessary_new
-                                  icon: const Icon(
+                                  icon: Icon(
                                     Icons.remove,
                                     size: 10,
                                   ),
                                   alignment: Alignment.center,
-                                  padding: const EdgeInsets.all(0.0),
+                                  padding: EdgeInsets.all(0.0),
                                   onPressed: () {},
                                 ),
                               ),
                               Container(
                                 height: 18,
                                 width: 22,
-                                color: const Color.fromARGB(212, 243, 200, 71),
+                                color: Color.fromARGB(212, 243, 200, 71),
                                 // ignore: sort_child_properties_last
-                                child: const Text('1'),
+                                child: Text('1'),
                                 alignment: Alignment.center,
-                                padding: const EdgeInsets.all(0.0),
+                                padding: EdgeInsets.all(0.0),
                               ),
                               Container(
                                 height: 18,
                                 width: 22,
-                                color: const Color.fromARGB(255, 240, 219, 156),
+                                color: Color.fromARGB(255, 240, 219, 156),
                                 child: IconButton(
-                                  icon: const Icon(
+                                  icon: Icon(
                                     Icons.add,
                                     size: 10,
                                   ),
@@ -186,7 +190,9 @@ class _cartPageState extends State<cartPage> {
                     'TOTAL',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
                   ),
-                  SizedBox(width: 70,),
+                  SizedBox(
+                    width: 70,
+                  ),
                   Text(
                     '340/-',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
