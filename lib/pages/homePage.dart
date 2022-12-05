@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last, sized_box_for_whitespace, camel_case_types, file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:fresheezone/microdeliverypage.dart';
+import 'package:fresheezone/pages/shopByCategoryPage.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -95,28 +97,35 @@ class _homePageState extends State<homePage> {
                         physics: const ClampingScrollPhysics(),
                         itemCount: 30,
                         itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: const [
-                                CircleAvatar(
-                                  backgroundImage:
-                                      AssetImage('assets/vegetables.png'),
-                                  radius: 28,
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Fresh',
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                Text(
-                                  'Vegetables',
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                              ],
+                          return InkWell(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: const [
+                                  CircleAvatar(
+                                    backgroundImage:
+                                        AssetImage('assets/vegetables.png'),
+                                    radius: 28,
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Fresh',
+                                    style: TextStyle(fontSize: 10),
+                                  ),
+                                  Text(
+                                    'Vegetables',
+                                    style: TextStyle(fontSize: 10),
+                                  ),
+                                ],
+                              ),
                             ),
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const shopByCategory(),
+                              ));
+                            },
                           );
                         },
                       ),
@@ -284,7 +293,7 @@ class _homePageState extends State<homePage> {
               const Padding(
                 padding: EdgeInsets.only(right: 250, top: 20),
                 child: Text(
-                  'Scrap Buk',
+                  'Bye Buy Scrap',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
@@ -303,27 +312,36 @@ class _homePageState extends State<homePage> {
                           physics: ClampingScrollPhysics(),
                           itemCount: 20,
                           itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: const [
-                                  CircleAvatar(
-                                    backgroundImage: AssetImage('assets/bag.png'),
-                                    radius: 28,
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    'Plastic Bag',
-                                    style: TextStyle(fontSize: 10),
-                                  ),
-                                  Text(
-                                    'Rs. 4/- per kg.',
-                                    style: TextStyle(fontSize: 10),
-                                  ),
-                                ],
+                            return InkWell(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: const [
+                                    CircleAvatar(
+                                      backgroundImage:
+                                          AssetImage('assets/bag.png'),
+                                      radius: 28,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Plastic Bag',
+                                      style: TextStyle(fontSize: 10),
+                                    ),
+                                    Text(
+                                      'Rs. 4/- per kg.',
+                                      style: TextStyle(fontSize: 10),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) =>
+                                      const microdeliverypage(),
+                                ));
+                              },
                             );
                           },
                         )

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:counter_button/counter_button.dart';
+import 'package:fresheezone/pages/addressPage.dart';
 
 class cartPage extends StatefulWidget {
   const cartPage({super.key});
@@ -110,7 +111,7 @@ class _cartPageState extends State<cartPage> {
                               SizedBox(
                                 width: 5,
                               ),
-                              Container( 
+                              Container(
                                 height: 18,
                                 width: 22,
                                 color: Color.fromARGB(255, 240, 219, 156),
@@ -207,7 +208,11 @@ class _cartPageState extends State<cartPage> {
                 height: 40,
                 child: ElevatedButton(
                   //style:
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AddressPage(),
+                    ));
+                  },
                   // ignore: sort_child_properties_last
                   child: const Text(
                     'Check Out',

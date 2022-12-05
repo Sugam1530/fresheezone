@@ -2,10 +2,16 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fresheezone/microdeliverypage.dart';
 import 'package:fresheezone/pages/cartPage.dart';
 import 'package:fresheezone/pages/homePage.dart';
 import 'package:fresheezone/pages/myOrderPage.dart';
+import 'package:fresheezone/pages/myProfilePage.dart';
+import 'package:fresheezone/pages/offersZonePage.dart';
+import 'package:fresheezone/pages/shopByCategoryPage.dart';
+import 'package:fresheezone/pages/walletPage.dart';
 import 'package:fresheezone/pages/wishlistPage.dart';
+import 'package:fresheezone/scrapbukpage.dart';
 
 class dashboardPage extends StatefulWidget {
   const dashboardPage({super.key});
@@ -98,7 +104,9 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const shopByCategory(),
+                ));
               },
             ),
             ListTile(
@@ -113,7 +121,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OfferPage(),));
               },
             ),
             ListTile(
@@ -128,7 +136,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const wishListPage(),));
               },
             ),
             ListTile(
@@ -143,7 +151,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const cartPage(),));
               },
             ),
             ListTile(
@@ -158,7 +166,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const myOrderPage(),));
               },
             ),
             ListTile(
@@ -173,7 +181,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const walletpage(),));
               },
             ),
             ListTile(
@@ -188,7 +196,9 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ProfilePage(),
+                ));
               },
             ),
             ListTile(
@@ -204,7 +214,7 @@ class _dashboardPageState extends State<dashboardPage> {
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const microdeliverypage(),));
               },
             ),
             ListTile(
@@ -215,11 +225,11 @@ class _dashboardPageState extends State<dashboardPage> {
                 color: Colors.green,
               ),
               title: const Text(
-                'SCRAP BUK',
+                'Bye Buy SCRAP',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
               ),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const scrapbukpage(),));
               },
             ),
             ListTile(

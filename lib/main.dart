@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:fresheezone/pages/dashboard.dart';
 import 'package:fresheezone/pages/registerPage.dart';
 import 'package:fresheezone/pages/splashScreen.dart';
+import 'package:fresheezone/scrapbukpage.dart';
 
 void main() async {
   runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key); 
   @override
   State<MyApp> createState() => _MyAppState();
 }  
